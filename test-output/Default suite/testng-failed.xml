@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest">
+      <class name="ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest">
         <methods>
           <include name="closeApplication"/>
-          <include name="test"/>
           <include name="brwsrLaunch"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest -->
+      </class> <!-- ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

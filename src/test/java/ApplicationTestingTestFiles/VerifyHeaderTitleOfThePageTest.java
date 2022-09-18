@@ -31,7 +31,7 @@ public class VerifyHeaderTitleOfThePageTest {
 	public static final String columnByText = "Data";
 	
 	TestDataFile testDataFile = new TestDataFile(driver);
-	NumadicCarrersProcess numadicCareersProcess = new NumadicCarrersProcess(driver);
+//	NumadicCarrersProcess numadicCareersProcess = new NumadicCarrersProcess(driver);
 	
 	@BeforeTest
 	public void brwsrLaunch() throws Exception {
@@ -61,10 +61,12 @@ public class VerifyHeaderTitleOfThePageTest {
 		/*
 		 * To capture screenshot and attach to the extend report.
 		 */
+		Reporter.log("<h2>Verify Header Text (JOIN OUR CREW)</h2>");
 		Reporter.log("The Header Text is displayed as: " + actualText);
 		String screenshot=abstractBasePage.captureScreenShot("HeaderText.png");
-		System.out.println(screenshot);
 		Reporter.log("<img src=\"" + screenshot+"\"/>");
+		
+		Reporter.log("Close the browser. ");
 	}
 	
 	

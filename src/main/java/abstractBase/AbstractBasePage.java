@@ -23,10 +23,15 @@ public class AbstractBasePage {
 	
 	WebDriver driver;
 	
-	 public AbstractBasePage(WebDriver driver){
-	        this.driver = driver;
-	        PageFactory.initElements(driver, this);
-	    }
+	public AbstractBasePage(WebDriver driver){
+
+        this.driver = driver;
+
+        //This initElements method will create all WebElements
+
+        PageFactory.initElements(driver, this);
+
+    }
 	
 	 public static @FindBy (xpath = "//*[@class='animated fadeIn mb-md']")
 		WebElement greetingText;
@@ -50,12 +55,53 @@ public class AbstractBasePage {
 	 public static @FindBy (xpath = "//*[@class='btn btn-lg btn-red']")
 	 	WebElement ApplyHereNowButton;
 	 
-	 
 	 public static @FindBy (xpath = "//*[@id='job-posts-table']/tbody//td[2]/a[contains(text(),'QA Engineer')]/../../td[5]/button")
 	 	WebElement ApplyButton;
 	 
+	 public static @FindBy (id = "firstName")
+	 	WebElement firstName;
 	 
+	 public static @FindBy (id = "lastName")
+	 	WebElement lastName;
 	 
+	 public static @FindBy (id = "email")
+	 	WebElement emailId;
+	 
+	 public static @FindBy (id = "phone")
+	 	WebElement contactNumber;
+	 
+	 public static @FindBy (id = "sports")
+	 	WebElement sports;
+	 
+	 public static @FindBy (id = "pets")
+	 	WebElement pets;
+	 
+	 public static @FindBy (id = "current_city")
+	 	WebElement city;
+	 
+	 public static @FindBy (id = "hometown")
+	 	WebElement homeTown;
+	 
+	 public static @FindBy (id = "dob")
+	 	WebElement DOB;
+	 
+	 public static @FindBy (id = "careers_form_btn_step1")
+	 	WebElement nextButton;
+	 
+	 public static @FindBy (xpath = "//ul/li[contains(text(),'Enter your first name')]")
+	 	WebElement firstNameError;
+	 
+	 public static @FindBy (xpath = "//ul/li[contains(text(),'Enter your last name')]")
+	 	WebElement lastNameError;
+	 
+	 public static @FindBy (xpath = "//ul/li[contains(text(),'Enter an email')]")
+	 	WebElement emailIdError;
+	 
+	 public static @FindBy (xpath = "//ul/li[contains(text(),'Enter your mobile number')]")
+	 	WebElement contactNumberError;
+	 
+	 public static @FindBy (id = "//label[@id='email_label']//../ul[@class='parsley-errors-list']")
+	 	WebElement validEntryEmail;
 	 
 	 public void launchApplication(String url) {
 			driver.manage().window().maximize();
@@ -130,7 +176,31 @@ public class AbstractBasePage {
 			String value = element.getAttribute(attribute);
 			return value;
 		}
+		
+		public boolean verifyElementEnable(WebElement element) {
+			 boolean iseElementEnable = element.isEnabled();
+			 return iseElementEnable;
+		 }
+		 
+		 public boolean verifyElementSelected(WebElement element) {
+			 boolean iseElementselected = element.isSelected();
+			 return iseElementselected;
+		 }
 
+		 public boolean isEmpty(WebElement element) {
+			 boolean isempty = element.getText().equalsIgnoreCase("");
+			 return isempty;
+		 }
+		 
+		 public String validateBlankTextErrorMessage(WebElement element, WebElement Message) {
+			 String Msg = "";
+			 if(isEmpty(element)) {
+				 verifyElementPresent(Message);
+				 Msg = Message.getText();
+			 }
+			 return Msg;
+		 }
+		
 	 public void closeApp() {
 		 driver.quit();
 	 }

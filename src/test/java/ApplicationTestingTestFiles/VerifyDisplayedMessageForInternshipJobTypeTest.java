@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -47,15 +48,31 @@ public class VerifyDisplayedMessageForInternshipJobTypeTest {
 	
 	@Test (priority = 0)
 	public void test() throws Exception {
+		Reporter.log("<h2>From Job type Dropdown select \"Internship\". </h2>");
+		Reporter.log("Launch Numadic Application. ");
+		
 		AbstractBasePage abstractBasePage = new AbstractBasePage(driver);
 		String selectText = testDataFile.readData(testDataFileName, testDataSheetName, columnByText, "JobType");
+		Reporter.log("select the Job type as: " + selectText);
 		abstractBasePage.selectText(AbstractBasePage.jobType, selectText);
+		Reporter.log("Application throws a warning Message When Jopb Type is an \"INTERNSHIP\". ");
+		
+		Reporter.log("<h3>Message (There are no available job positions that match your filters.) should be verified. </h3>");
+		Reporter.log("Application dispalyed the Alert message. ");
 		String actualText = abstractBasePage.getWebElementText(AbstractBasePage.message);
+		/*
+		 * To capture screenshot and attach to the extend report.
+		 */
+		Reporter.log("The Header Text is displayed as: " + actualText);
+		String screenshot=abstractBasePage.captureScreenShot("AlertMessage.png");
+		Reporter.log("<img src=\"" + screenshot+"\"/>");
+		
 		String expectedText = testDataFile.readData(testDataFileName, testDataSheetName, columnByText, "MessageDisplayed");
 		Assert.assertEquals(expectedText, actualText, "Application displayed the Message for internship job type: \"There are no available "
 				+ "job positions that match your filters\". ");
+		
+		Reporter.log("Close the Browser");
 	}
-	
 	
 	@AfterTest()
 	public void closeApplication() {
