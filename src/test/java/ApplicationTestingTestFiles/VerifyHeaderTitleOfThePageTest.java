@@ -56,8 +56,14 @@ public class VerifyHeaderTitleOfThePageTest {
 		String actualText = abstractBasePage.getWebElementText(AbstractBasePage.greetingText);
 		String expectedText = testDataFile.readData(testDataFileName, testDataSheetName, columnByText, "HeaderText");
 		Assert.assertEquals(expectedText, actualText, "Web Application has displayed the header text \"JOIN OUR CREW \". ");
+		
+		/*
+		 * To capture screenshot and attach to the extend report.
+		 */
 		Reporter.log("The Header Text is displayed as: " + actualText);
-		numadicCareersProcess.captureScreenShot("capture1.png");
+		String screenshot=abstractBasePage.captureScreenShot("HeaderText.png");
+		System.out.println(screenshot);
+		Reporter.log("<img src=\"" + screenshot+"\"/>");
 	}
 	
 	

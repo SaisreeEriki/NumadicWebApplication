@@ -1,8 +1,16 @@
 package abstractBase;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.testng.Reporter;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -83,14 +91,46 @@ public class AbstractBasePage {
 		 return currentUrl;
 	 }
 	 
-	 public void hoveringOnElement(WebElement srcElement, WebElement targetElement) {
+	 public void hoveringOnElement(WebElement srcElement, WebElement targetElement) throws IOException {
 		Actions action = new Actions(driver);
-		action.moveToElement(srcElement)
-			.moveToElement(targetElement)
+		logMessage("Hover on the Element. ");
+		action.moveToElement(srcElement);
+		logMessage("Move to the Apply Button");
+		captureScreenShot("ApplyButton.png");
+		action.moveToElement(targetElement)
 			.build()
 			.perform();
 	 }
-	 
+
+	public String captureScreenShot(String filePath) throws IOException {
+		String srcPath = "D:\\New Project\\NumadicAssessment\\Screenshots\\";
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(src,new File(srcPath + timestamp() + " " + filePath));
+			} catch (IOException e)
+
+			{
+				System.out.println(e.getMessage());
+			}
+		String fileName = srcPath + timestamp() + " " + filePath;
+		return fileName;
+			
+			
+		}
+
+		public static String timestamp() {
+			return new SimpleDateFormat("yyyy-Mm-dd HH-mm-ss").format(new Date());
+		}
+		
+		public void logMessage(String logMessage) {
+			Reporter.log(logMessage);
+		}
+		
+		public String getAttributeValues(WebElement element, String attribute) {
+			String value = element.getAttribute(attribute);
+			return value;
+		}
+
 	 public void closeApp() {
 		 driver.quit();
 	 }
