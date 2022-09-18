@@ -1,73 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Launch Chrome WebDriver]]>
+      <![CDATA[<h2>Validate Personal Details Form. </h2>]]>
     </line>
     <line>
-      <![CDATA[Navigate to Numadic Careers Page.]]>
+      <![CDATA[<h3>From Job dropdown, Select FULL TIME. </h3>]]>
     </line>
     <line>
-      <![CDATA[Validate the Header Text of the Careers Page.]]>
+      <![CDATA[Selected Job Type as FullTime. ]]>
     </line>
     <line>
-      <![CDATA[<h2>Verify Header Text (JOIN OUR CREW)</h2>]]>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 SelectedJobType.png"/>]]>
     </line>
     <line>
-      <![CDATA[The Header Text is displayed as: JOIN OUR CREW]]>
+      <![CDATA[Selected Job Type - Full time]]>
     </line>
     <line>
-      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-942-18 10-42-22 HeaderText.png"/>]]>
+      <![CDATA[<h3>From Job listing option select QA Engineer. </h3>]]>
     </line>
     <line>
-      <![CDATA[Close the browser. ]]>
+      <![CDATA[get Current Url]]>
     </line>
     <line>
-      <![CDATA[Close all the tabs and Chrome WebDriver. ]]>
+      <![CDATA[https://numadic.com/careers/]]>
+    </line>
+    <line>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 SelectedJobType.png"/>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify button ‘Apply here now’ and perform a click action. </h3>]]>
+    </line>
+    <line>
+      <![CDATA[Verify Page load successfully. ]]>
+    </line>
+    <line>
+      <![CDATA[Page load status: complete]]>
+    </line>
+    <line>
+      <![CDATA[Page redirects back to the Careers Page. ]]>
+    </line>
+    <line>
+      <![CDATA[Validate redirected page is the same Career Page]]>
+    </line>
+    <line>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 RedirectedToCareer.png"/>]]>
+    </line>
+    <line>
+      <![CDATA[<h3>Verify redirect back to careers page. </h3>]]>
+    </line>
+    <line>
+      <![CDATA[Verify existence of Apply here now button in the page. ]]>
+    </line>
+    <line>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-55 ApplyHereButton.png"/>]]>
+    </line>
+    <line>
+      <![CDATA[Apply here now button is exist in the page. ]]>
+    </line>
+    <line>
+      <![CDATA[Click on Apply here now button]]>
+    </line>
+    <line>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-55 redirectedPage.png"/>]]>
+    </line>
+    <line>
+      <![CDATA[Page has been redirected back to Careers Page.]]>
+    </line>
+    <line>
+      <![CDATA[<h3>On listing page, hover over QA Engineer, click ‘Apply’ button. </h3>]]>
+    </line>
+    <line>
+      <![CDATA[Hover on QAEngineer option. ]]>
+    </line>
+    <line>
+      <![CDATA[Hover on the Element. ]]>
+    </line>
+    <line>
+      <![CDATA[Move to the Apply Button]]>
+    </line>
+    <line>
+      <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-56 HoverOnQAEng.png"/>]]>
+    </line>
+    <line>
+      <![CDATA[Click on Apply Button.]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-09-18T10:42:14 IST" name="Default suite" finished-at="2022-09-18T10:42:22 IST" duration-ms="8287">
+  <suite started-at="2022-09-18T10:57:45 IST" name="Default suite" finished-at="2022-09-18T10:58:08 IST" duration-ms="22843">
     <groups>
     </groups>
-    <test started-at="2022-09-18T10:42:14 IST" name="Default test" finished-at="2022-09-18T10:42:22 IST" duration-ms="8287">
-      <class name="ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest">
-        <test-method is-config="true" signature="brwsrLaunch()[pri:0, instance:ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest@10e31a9a]" started-at="2022-09-18T10:42:14 IST" name="brwsrLaunch" finished-at="2022-09-18T10:42:21 IST" duration-ms="7190" status="PASS">
+    <test started-at="2022-09-18T10:57:45 IST" name="Default test" finished-at="2022-09-18T10:58:08 IST" duration-ms="22843">
+      <class name="ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest">
+        <test-method is-config="true" signature="brwsrLaunch()[pri:0, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:45 IST" name="brwsrLaunch" finished-at="2022-09-18T10:57:53 IST" duration-ms="7444" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[Launch Chrome WebDriver]]>
-            </line>
-            <line>
-              <![CDATA[Navigate to Numadic Careers Page.]]>
-            </line>
           </reporter-output>
         </test-method> <!-- brwsrLaunch -->
-        <test-method signature="test()[pri:0, instance:ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest@10e31a9a]" started-at="2022-09-18T10:42:21 IST" name="test" finished-at="2022-09-18T10:42:22 IST" duration-ms="829" status="PASS">
+        <test-method signature="test()[pri:0, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:53 IST" name="test" finished-at="2022-09-18T10:57:54 IST" duration-ms="1031" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Validate the Header Text of the Careers Page.]]>
+              <![CDATA[<h2>Validate Personal Details Form. </h2>]]>
             </line>
             <line>
-              <![CDATA[<h2>Verify Header Text (JOIN OUR CREW)</h2>]]>
+              <![CDATA[<h3>From Job dropdown, Select FULL TIME. </h3>]]>
             </line>
             <line>
-              <![CDATA[The Header Text is displayed as: JOIN OUR CREW]]>
+              <![CDATA[Selected Job Type as FullTime. ]]>
             </line>
             <line>
-              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-942-18 10-42-22 HeaderText.png"/>]]>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 SelectedJobType.png"/>]]>
             </line>
             <line>
-              <![CDATA[Close the browser. ]]>
+              <![CDATA[Selected Job Type - Full time]]>
             </line>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest@10e31a9a]" started-at="2022-09-18T10:42:22 IST" name="closeApplication" finished-at="2022-09-18T10:42:22 IST" duration-ms="224" status="PASS">
+        <test-method signature="QAEngineerPostion()[pri:1, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:54 IST" name="QAEngineerPostion" finished-at="2022-09-18T10:57:54 IST" duration-ms="535" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Close all the tabs and Chrome WebDriver. ]]>
+              <![CDATA[<h3>From Job listing option select QA Engineer. </h3>]]>
+            </line>
+            <line>
+              <![CDATA[get Current Url]]>
+            </line>
+            <line>
+              <![CDATA[https://numadic.com/careers/]]>
+            </line>
+            <line>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 SelectedJobType.png"/>]]>
             </line>
           </reporter-output>
+        </test-method> <!-- QAEngineerPostion -->
+        <test-method signature="verifyUrlRedirect()[pri:2, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:54 IST" name="verifyUrlRedirect" finished-at="2022-09-18T10:57:54 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify button ‘Apply here now’ and perform a click action. </h3>]]>
+            </line>
+            <line>
+              <![CDATA[Verify Page load successfully. ]]>
+            </line>
+            <line>
+              <![CDATA[Page load status: complete]]>
+            </line>
+            <line>
+              <![CDATA[Page redirects back to the Careers Page. ]]>
+            </line>
+            <line>
+              <![CDATA[Validate redirected page is the same Career Page]]>
+            </line>
+            <line>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-54 RedirectedToCareer.png"/>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyUrlRedirect -->
+        <test-method signature="clickOnApplyHere()[pri:3, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:54 IST" name="clickOnApplyHere" finished-at="2022-09-18T10:57:56 IST" duration-ms="1061" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Verify redirect back to careers page. </h3>]]>
+            </line>
+            <line>
+              <![CDATA[Verify existence of Apply here now button in the page. ]]>
+            </line>
+            <line>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-55 ApplyHereButton.png"/>]]>
+            </line>
+            <line>
+              <![CDATA[Apply here now button is exist in the page. ]]>
+            </line>
+            <line>
+              <![CDATA[Click on Apply here now button]]>
+            </line>
+            <line>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-55 redirectedPage.png"/>]]>
+            </line>
+            <line>
+              <![CDATA[Page has been redirected back to Careers Page.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnApplyHere -->
+        <test-method signature="hoverAndClickOnApply()[pri:4, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:57:56 IST" name="hoverAndClickOnApply" finished-at="2022-09-18T10:58:06 IST" duration-ms="10900" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>On listing page, hover over QA Engineer, click ‘Apply’ button. </h3>]]>
+            </line>
+            <line>
+              <![CDATA[Hover on QAEngineer option. ]]>
+            </line>
+            <line>
+              <![CDATA[Hover on the Element. ]]>
+            </line>
+            <line>
+              <![CDATA[Move to the Apply Button]]>
+            </line>
+            <line>
+              <![CDATA[<img src="D:\New Project\NumadicAssessment\Screenshots\2022-957-18 10-57-56 HoverOnQAEng.png"/>]]>
+            </line>
+            <line>
+              <![CDATA[Click on Apply Button.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- hoverAndClickOnApply -->
+        <test-method signature="validatePersonalDetailsForm()[pri:5, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:58:06 IST" name="validatePersonalDetailsForm" finished-at="2022-09-18T10:58:08 IST" duration-ms="1253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePersonalDetailsForm -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest@57a3af25]" started-at="2022-09-18T10:58:08 IST" name="closeApplication" finished-at="2022-09-18T10:58:08 IST" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- ApplicationTestingTestFiles.VerifyHeaderTitleOfThePageTest -->
+      </class> <!-- ApplicationTestingTestFiles.VerifyApplyingForQAEngineerPositionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
