@@ -57,6 +57,7 @@ public class VerifyHeaderTitleOfThePageTest {
 		String expectedText = testDataFile.readData(testDataFileName, testDataSheetName, columnByText, "HeaderText");
 		Assert.assertEquals(expectedText, actualText, "Web Application has displayed the header text \"JOIN OUR CREW \". ");
 		
+		
 		/*
 		 * To capture screenshot and attach to the extend report.
 		 */
